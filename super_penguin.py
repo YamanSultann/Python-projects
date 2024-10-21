@@ -13,4 +13,13 @@ class Penguin(Bird):
         super().__init__()
         print("The penguin is ready")
 
-    def 
+    def whoIsThis(self):
+        print("Penguin")
+
+    def run(self):
+        print("Run faster")
+
+peggy = Penguin
+peggy.whoIsThis
+peggy.swim
+peggy.run

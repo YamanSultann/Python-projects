@@ -7,7 +7,7 @@ font_size = 72
 
 pygame.init()
 
-background_image = pygame.transform.scale(pygame.image.load("background.png"),screenwidth,screenheight)
+background_image = pygame.transform.scale(pygame.image.load("background.png"),(screenwidth,screenheight))
 
 font = pygame.font.SysFont("Times New Roman",font_size)
 
@@ -57,4 +57,8 @@ while running:
     all_sprites.draw(screen)
 
     if won:
-        win_text
+        win_text = font.render("You win!", True, pygame.Color('black'))
+        screen.blit(win_text, ((screenwidth - win_text.get_width()) // 2,(screenheight - win_text.get_height()) // 2))
+    pygame.display.flip()
+    clock.tick(90)
+pygame.quit()

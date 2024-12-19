@@ -1,0 +1,12 @@
+import numpy as np
+import pandas as pd
+
+exam_data = {'name':['Auhona','Alvi','Musfiq','Ammar','Prionty','Nafis','Lameya','Salma','Labib','Lanika'],
+             'score':[16.8,19.5,5,np.nan,17,np.nan,14.8,3.1,2.4,20],
+             'attempts':[3,1,5,2,2,1,7,1,10,1],
+             'qualify':['yes','yes','no','no','yes','no','yes','no','no','yes']}
+
+labels = ['a','b','c','d','e','f','g','h','i','j']
+
+df = pd.DataFrame(exam_data,index=labels)
+print(df.info)
